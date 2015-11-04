@@ -1,0 +1,111 @@
+
+
+<p  class="text-info">
+   <h3 align="center">Welcome to Eatery.com</h3>
+
+
+<p align="center" >
+    Please select the meals you want and add them to your shopping cart.<br />
+    When you are done, click the shopping cart icon to review your order and check out.
+</p>
+
+<p align="right">
+    Search Meals: <input ng-model="search">
+</p>
+
+
+
+<table class="table table-bordered">
+    <tr class="well">
+        <td  align="right" colspan="3" >
+            <a href="index.html#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+            </a>
+        </td>
+    </tr>
+
+
+   <tr ng-repeat="meal in store.meals | orderBy:'name' | filter:search" >
+
+        <td class="tdCenter" align="center"><div class="img-wrapper">
+        <img ng-src="images/{{meal.sku}}.jpg" alt="{{meal.name}}"style="width:300px;height:200px"  class="img-rounded">
+        </div>
+        </td>
+
+        <td>
+            <a href="#/meals/{{meal.sku}}"><b>{{meal.name}}</b></a><br />
+           <b>Description:</b> {{meal.description}}<br>
+            <b>Location:</b>{{meal.location}}<br>
+           <b>Price:</b> {{meal.price | currency}}<br>
+            <a href="" ng-click="cart.addItem(meal.sku, meal.name, meal.price, 1)">
+                <button type="submit" class="btn btn-primary lg">Add to cart</button>
+            </a>
+        </td>
+
+           </tr>
+
+
+
+    <tr class="well">
+        <td class="tdRight" align="right" colspan="4">
+            <a href="index.html#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                <i class="icon-shopping-cart" />
+                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+            </a>
+        </td>
+    </tr>
+</table>
+
+
+<!--
+<div class="cart-wrapper">
+    <a class="cart-anchor" href="/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+        <span ng-bind="cart.getTotalCount()"></span> items, <span ng-bind="cart.getTotalPrice() | currency"></span>
+    </a>
+</div>
+
+&lt;!&ndash;div class="emotion">
+	<img src="img/banner-destiny.jpg" alt="Destiny">
+</div&ndash;&gt;
+
+<div class="products seeded">
+
+    <div class="item" ng-repeat="meal in store.meals | orderBy:'name' | filter:search">
+        <a class="img-anchor" href="#/meals/{{meal.sku}}">
+            <img ng-src="images/{{meal.sku}}.jpg" alt="{{meal.name}}" />
+        </a>
+        <a class="name" href="#/meals/{{meal.sku}}" ng-bind="meal.name"></a>
+        <span class="price" ng-bind="meal.price | currency"></span>
+    </div>
+
+</div>
+
+<div class="products list">
+
+    <div class="item" ng-repeat="meal in store.meals | orderBy:'name' | filter:search">
+
+        <div class="left">
+            <a class="img-anchor" href="#/meals/{{meal.sku}}">
+                <img ng-src="images/{{meal.sku}}.jpg" alt="{{meal.name}}" />
+            </a>
+        </div>
+
+        <div class="right">
+            <a class="name" href="#/meals/{{meal.sku}}" ng-bind="meal.name"></a>
+            <span class="price" ng-bind="meal.price | currency"></span>
+            <span class="description" ng-bind="meal.description"></span>
+            <span class="description" ng-bind="meal.cuisineType"></span>
+            <span class="description" ng-bind="meal.ingredients"></span>
+            <span class="description" ng-bind="meal.allergenInfo"></span>
+            <span class="description" ng-bind="meal.location"></span>
+            <span class="description" ng-bind="meal.owner"></span>
+
+
+        </div>
+
+    </div>
+
+</div>
+-->
+

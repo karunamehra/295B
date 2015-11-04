@@ -1,0 +1,14 @@
+
+[
+{
+  "id": 1,
+  "mealname": "Paneer Tikka",
+  "description":"This is a north indian cheese dish made with tomato and basil .",
+  "image": "potatoes_tomatoes_curry.jpg",
+  "price": "$9",
+  "cuisine":"Indian",
+  "ingredients":"Milk, Wheat,Cashews",
+  "allergen-info":"Soy"
+
+}
+    ]

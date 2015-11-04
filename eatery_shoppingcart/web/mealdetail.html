@@ -1,0 +1,36 @@
+
+<div class="content">
+
+
+
+                <div ng-repeat="meal in mealdetail">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                        <a href="#"><img  src="images/{{meal.image}}" class=center-block alt="" style="width:400px;height:250px ;margin-top: 2%"></a>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h2>{{meal.mealname}} </h2>
+                        <h4><strong>Description:</strong>{{meal.description}}</h4>
+                        <h4><strong>Cuisine Type:</strong>{{meal.cuisine}}</h4>
+                        <h4><strong>Ingredients:</strong>{{meal.ingredients}}</h4>
+                        <h4><strong>Allergen Information:</strong>{{meal.allergen-info}}</h4>
+                        <h4><strong>Price:</strong>{{meal.price}}</h4>
+                        </div>
+                        <div class="gallery-button btn-lg "><a href="#/shoppingcart">Add to cart</a></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+

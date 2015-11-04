@@ -1,0 +1,31 @@
+
+[
+{
+  "id": 1,
+  "mealname": "Paneer Tikka",
+  "description":"This is a north indian cheese dish made with tomato and basil .",
+  "image": "potatoes_tomatoes_curry.jpg",
+  "price": "$9"
+},
+  {
+    "id": 2,
+    "mealname": "Thai Curry",
+    "description":"This is a tahi dish made with Yellow Curry , very delicious .",
+    "image": "thai-vegi-curry.jpg",
+    "price": "$11"
+  },
+  {
+    "id": 3,
+    "mealname": "Chana Masala",
+    "description": "This is a north indian cheese dish made of chickpeas .",
+    "image": "chana_curry.jpg",
+    "price": "$12"
+  },
+  {
+    "id": 4,
+    "mealname": "Fish Curry",
+    "description": "This is a south indian fish curry .",
+    "image": "fishcurry.jpg",
+    "price": "$10"
+  }
+    ]
